@@ -7,20 +7,20 @@
     <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
   </head>
   <body>
-  <div align="center">
-    <h1>Create new Carpool</h1>
-	    <form style="margin-left:auto; margin-right:auto;width:206px">
+  <div>
+    <h1 align="center">Create new Carpool</h1>
+	    <form style="margin-left:auto; margin-right:auto;width:206px" method="post">
 		  <fieldset>
 		    <label align="left" >Start</label>
-		    <input type="text" placeholder="Start Location">
+		    <input type="text" name = "startLocation" placeholder="Start Location">
 		    <label align="left">End</label>
-		    <input type="text" placeholder="End Location">
+		    <input type="text" name = "endLocation" placeholder="End Location">
 		    <label align="left">Date</label>
-		    <input type="text" placeholder="Date">
+		    <input type="text" name = "date" placeholder="Date">
 		    <label align="left">Time</label>
-		    <input type="text" placeholder="Time">
+		    <input type="text" name = "time" placeholder="Time">
 		    <label align="left">Cost</label>
-		    <input type="text" placeholder="Amount">
+		    <input type="text" name = "cost" placeholder="Amount">
 		  </fieldset>
 		  <button type="submit" class="btn">Submit</button>
 		</form>

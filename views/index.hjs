@@ -7,14 +7,16 @@
     <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
-    <p><a href = "/create">Create</a></p>
-    {{#carpool}}	
-	  <b><a href="{{url}}">{{name}}</a></b>
-	{{/carpool}}
-	{{^carpool}}
-	  No pool.
-	{{/carpool}}
+    <h1 align="center">{{ title }}</h1>
+  	<div style="margin-left:auto; margin-right:auto;width:206px">
+	    <p>Welcome to {{ title }}</p>
+	    <p><a href = "/create">Create</a></p>
+	    {{#carpool}}	
+		  <b><a href="{{url}}">{{name}}</a></b>
+		{{/carpool}}
+		{{^carpool}}
+		  No pool.
+		{{/carpool}}
+  	</div>
   </body>
 </html>
