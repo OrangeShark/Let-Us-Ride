@@ -12,15 +12,15 @@
 	    <form style="margin-left:auto; margin-right:auto;width:206px" method="post">
 		  <fieldset>
 		    <label align="left" >Start</label>
-		    <input type="text" name = "startLocation" placeholder="Start Location">
+		    <input type="text" name = "carpool[startLocation]" placeholder="Start Location">
 		    <label align="left">End</label>
-		    <input type="text" name = "endLocation" placeholder="End Location">
+		    <input type="text" name = "carpool[endLocation]" placeholder="End Location">
 		    <label align="left">Date</label>
-		    <input type="text" name = "date" placeholder="Date">
+		    <input type="text" name = "carpool[date]" placeholder="Date">
 		    <label align="left">Time</label>
-		    <input type="text" name = "time" placeholder="Time">
+		    <input type="text" name = "carpool[time]" placeholder="Time">
 		    <label align="left">Cost</label>
-		    <input type="text" name = "cost" placeholder="Amount">
+		    <input type="text" name = "carpool[cost]" placeholder="Amount">
 		  </fieldset>
 		  <button type="submit" class="btn">Submit</button>
 		</form>
