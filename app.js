@@ -30,6 +30,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/create', routes.create);
+app.get('/payment', routes.payment);
+app.get('/invitation', routes.invitation);
+app.get('/carpool', routes.carpool);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
