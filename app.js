@@ -31,8 +31,11 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/create', routes.create);
+app.post('/create', routes.submitCarpool);
 app.get('/payment', routes.payment);
+app.post('/payment', routes.makePayment);
 app.get('/invitation', routes.invitation);
+app.post('/invitation', routes.updateInvitation);
 app.get('/carpool', routes.carpool);
 app.get('/users', user.list);
 

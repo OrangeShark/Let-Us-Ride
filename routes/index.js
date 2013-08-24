@@ -37,3 +37,15 @@ exports.payment = function(req, res){
   var data = {title: 'Let Us Ride - Payment'};
   res.render('payment', data);
 };
+
+exports.submitCarpool = function(req, res){
+  
+};
+
+exports.makePayment = function(req, res){
+
+};
+
+exports.updateInvitation = function(req, res){
+
+};
