@@ -2,11 +2,28 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src='javascript/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
   </head>
   <body>
-    <h1>{{ title }} - Create new Carpool</h1>
-    <p>{{ title }}</p>
-    
+  <div align="center">
+    <h1>Create new Carpool</h1>
+	    <form style="margin-left:auto; margin-right:auto;width:206px">
+		  <fieldset>
+		    <label align="left" >Start</label>
+		    <input type="text" placeholder="Start Location">
+		    <label align="left">End</label>
+		    <input type="text" placeholder="End Location">
+		    <label align="left">Date</label>
+		    <input type="text" placeholder="Date">
+		    <label align="left">Time</label>
+		    <input type="text" placeholder="Time">
+		    <label align="left">Cost</label>
+		    <input type="text" placeholder="Amount">
+		  </fieldset>
+		  <button type="submit" class="btn">Submit</button>
+		</form>
+  </div>
   </body>
 </html>
