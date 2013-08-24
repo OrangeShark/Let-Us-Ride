@@ -7,5 +7,12 @@
   <body>
     <h1>{{ title }}</h1>
     <p>Welcome to {{ title }}</p>
+    <p><a href = "/create">Create</a></p>
+    {{#carpool}}	
+	  <b><a href="{{url}}">{{name}}</a></b>
+	{{/carpool}}
+	{{^carpool}}
+	  No pool.
+	{{/carpool}}
   </body>
 </html>
