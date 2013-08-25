@@ -11,6 +11,8 @@
     <h1 align="center">Create new Carpool</h1>
 	    <form style="margin-left:auto; margin-right:auto;width:206px" method="post">
 		  <fieldset>
+		  	<label align="left" >Your Name</label>
+		    <input type="text" name = "carpool[driver]" placeholder="name">
 		    <label align="left" >Start</label>
 		    <input type="text" name = "carpool[startLocation]" placeholder="Start Location">
 		    <label align="left">End</label>

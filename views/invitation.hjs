@@ -7,8 +7,30 @@
     <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
   </head>
   <body>
-    <h1>{{ title }} - Invitation</h1>
-    <p>{{ title }}</p>
+    <h1 align="center">{{ title }} - Invitation</h1>
+    <div style="margin-left:auto; margin-right:auto;width:206px">
+    	<p>Hello {{ name }},<br/>
+    	{{driver}} has invited you to join a carpool.</p>
+    	{{driver}} <br />
+    	From: {{startLocation}} <br />
+    	To: {{endLocation}} <br />
+    	On: {{date}} <br />
+    	At: {{time}} <br />
+    	{{#cost}}
+    		For: ${{cost}} per person <br />
+    	{{/cost}}
+    	{{^cost}}
+    		For: FREE!<br />
+    	{{/cost}}
+    	<label align="left" >Pickup Location</label>
+	    <input type="text" name = "pickup" placeholder="Pickup Location">
+    	<div>
+    		<button type="submit" class="btn btn btn-success">Accept</button>
+    		<button type="submit" class="btn btn btn-danger">Decline</button>
+    	</div>
+    </div>
+    
+
     
   </body>
 </html>

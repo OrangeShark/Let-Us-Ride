@@ -9,7 +9,7 @@
   <body>
     <h1 align="center">{{ title }}</h1>
     <div style="margin-left:auto; margin-right:auto;width:206px">
-    	{{name}} <br />
+    	Driver: {{driver}} <br />
     	From: {{startLocation}} <br />
     	To: {{endLocation}} <br />
     	On: {{date}} <br />
