@@ -7,15 +7,19 @@
     <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
   </head>
   <body>
-    <h1>{{ title }} - Carpool</h1>
-    <p>{{ title }}</p>
-    <div>
+    <h1 align="center">{{ title }}</h1>
+    <div style="margin-left:auto; margin-right:auto;width:206px">
     	{{name}} <br />
     	From: {{startLocation}} <br />
     	To: {{endLocation}} <br />
     	On: {{date}} <br />
     	At: {{time}} <br />
-    	For: {{cost}} per person <br />
+    	{{#cost}}
+    		For: ${{cost}} per person <br />
+    	{{/cost}}
+    	{{^cost}}
+    		For: FREE!<br />
+    	{{/cost}}
     </div>
   </body>
 </html>

@@ -16,9 +16,9 @@
 		    <label align="left">End</label>
 		    <input type="text" name = "carpool[endLocation]" placeholder="End Location">
 		    <label align="left">Date</label>
-		    <input type="text" name = "carpool[date]" placeholder="Date">
+		    <input type="text" name = "carpool[date]" placeholder="mm/dd/yyyy">
 		    <label align="left">Time</label>
-		    <input type="text" name = "carpool[time]" placeholder="Time">
+		    <input type="text" name = "carpool[time]" placeholder="hh:mm AM/PM">
 		    <label align="left">Cost</label>
 		    <input type="text" name = "carpool[cost]" placeholder="Amount">
 		  </fieldset>
