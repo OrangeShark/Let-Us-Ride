@@ -9,6 +9,13 @@
   <body>
     <h1>{{ title }} - Carpool</h1>
     <p>{{ title }}</p>
-    
+    <div>
+    	{{name}} <br />
+    	From: {{startLocation}} <br />
+    	To: {{endLocation}} <br />
+    	On: {{date}} <br />
+    	At: {{time}} <br />
+    	For: {{cost}} per person <br />
+    </div>
   </body>
 </html>

@@ -12,7 +12,9 @@
 	    <p>Welcome to {{ title }}</p>
 	    <p><a href = "/create">Create</a></p>
 	    {{#carpool}}	
-		  <b><a href="{{url}}">{{name}}</a></b>
+		  <div>
+		  	<b><a href="{{url}}">{{name}}</a></b>
+		  </div>
 		{{/carpool}}
 		{{^carpool}}
 		  No pool.
