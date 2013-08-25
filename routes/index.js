@@ -36,7 +36,11 @@ exports.carpool = function(req, res){
     data.endLocation = docs[0].endLocation;
     data.date = docs[0].date;
     data.time = docs[0].time;
-    data.cost = docs[0].cost;
+    if (docs[0].cost) {
+      data.cost = docs[0].cost;
+    }
+    else
+      data.cost = false;
   
     res.render('carpool', data);
   });
