@@ -1,6 +1,7 @@
 var Datastore = require('nedb');
 
 carpooldb = new Datastore({filename: 'data/carpools.db', autoload: true});
+userdb = new Datastore({filename: 'data/users.db', autoload: true});
 /*
  * GET home page.
  */
