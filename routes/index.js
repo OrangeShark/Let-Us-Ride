@@ -37,6 +37,7 @@ exports.carpool = function(req, res){
     data.endLocation = docs[0].endLocation;
     data.date = docs[0].date;
     data.time = docs[0].time;
+    data.driver = docs[0].driver;
     if (docs[0].cost) {
       data.cost = docs[0].cost;
     }
