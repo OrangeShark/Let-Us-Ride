@@ -15,7 +15,7 @@ exports.index = function(req, res){
     console.log(docs.length);
     for(i = 0; i < docs.length; i++){
       console.log(JSON.stringify(docs[i]));
-      carpools[i] = {name: docs[i].startLocation + " - " + docs[i].endLocation, url: docs[i].url};
+      carpools[i] = {name: docs[i].startLocation + " - " + docs[i].endLocation, url: "/carpool/" + docs[i]._id};
     }
     data.carpool = carpools;
     res.render('index', data);
@@ -29,7 +29,17 @@ exports.create = function(req, res){
 
 exports.carpool = function(req, res){
   var data = {title: 'Let Us Ride - Carpool'};
-  res.render('carpool', data);
+  console.log(req.params.id);
+  carpooldb.find({_id:req.params.id}, function(err, docs){
+    data.name = docs[0]._id;
+    data.startLocation = docs[0].startLocation;
+    data.endLocation = docs[0].endLocation;
+    data.date = docs[0].date;
+    data.time = docs[0].time;
+    data.cost = docs[0].cost;
+  
+    res.render('carpool', data);
+  });
 };
 
 exports.invitation = function(req, res){
@@ -45,8 +55,8 @@ exports.payment = function(req, res){
 exports.submitCarpool = function(req, res){
   console.log(JSON.stringify(req.body.carpool));
   carpooldb.insert(req.body.carpool, function(err, newDoc){
-    console.error(err);
-    res.end();
+    if(err) console.error(err);
+    res.redirect('/');
 
   });
 };

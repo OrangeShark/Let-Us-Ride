@@ -36,7 +36,7 @@ app.get('/payment', routes.payment);
 app.post('/payment', routes.makePayment);
 app.get('/invitation', routes.invitation);
 app.post('/invitation', routes.updateInvitation);
-app.get('/carpool', routes.carpool);
+app.get('/carpool/:id', routes.carpool);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
