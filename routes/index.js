@@ -42,6 +42,11 @@ exports.carpool = function(req, res){
   });
 };
 
+exports.updateCarpool = function(req, res){
+ 
+
+} 
+
 exports.invitation = function(req, res){
   var data = {title: 'Let Us Ride - Invitation'};
   res.render('invitation', data);
@@ -54,9 +59,11 @@ exports.payment = function(req, res){
 
 exports.submitCarpool = function(req, res){
   console.log(JSON.stringify(req.body.carpool));
-  carpooldb.insert(req.body.carpool, function(err, newDoc){
+  var carpool = req.body.carpool;
+  carpool.riders = [];
+  carpooldb.insert(carpool, function(err, newDoc){
     if(err) console.error(err);
-    res.redirect('/');
+    res.redirect('/carpool/' + newDoc._id);
 
   });
 };
